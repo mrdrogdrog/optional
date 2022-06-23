@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "config:base",
+    ":gitSignOff",
+    ":preserveSemverRanges",
+    ":prHourlyLimitNone",
+    ":dependencyDashboard",
+    ":maintainLockFilesWeekly",
+    "schedule:daily"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "packageRules": [
+    {
+      "extends": "packages:linters",
+      "groupName": "linters"
+    },
+    {
+      "extends": "monorepo:typescript-eslint",
+      "groupName": "typescript-eslint monorepo"
+    },
+    {
+      "groupName": "definitelyTyped",
+      "matchPackagePatterns": [
+        "^@types/"
+      ]
+    },
+    {
+      "groupName": "Jest",
+      "matchPackageNames": [
+        "jest",
+        "ts-jest",
+        "@types/jest"
+      ]
+    }
+  ]
+}

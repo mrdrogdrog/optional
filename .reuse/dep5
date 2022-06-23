@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: optional
+Upstream-Contact: Tilman Vatteroth <git@tilmanvatteroth.de>
+Source: https://github.com/mrdrogdrog/optional
+
+Files: .yarn/**
+Copyright: Yarn contributors
+License: BSD-2-Clause
