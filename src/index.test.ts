@@ -159,17 +159,17 @@ describe('Optional', () => {
     expect(result).toBe(1)
   })
 
-  it('will throw an error if optional is empty in throwIfEmpty', () => {
+  it('will throw an error if optional is empty in orThrow', () => {
     const result = () =>
       Optional.empty()
-        .throwIfEmpty(() => new Error())
+        .orThrow(() => new Error())
         .get()
     expect(result).toThrow()
   })
 
-  it("won't throw an error if optional is non-empty in throwIfEmpty", () => {
+  it("won't throw an error if optional is non-empty in orThrow", () => {
     const result = Optional.of(1)
-      .throwIfEmpty(() => new Error())
+      .orThrow(() => new Error())
       .get()
     expect(result).toBe(1)
   })

@@ -171,7 +171,7 @@ export class Optional<T> {
    * @param exceptionSupplier The supplier that generates an error if the optional is empty
    * @return The current optional if the value is not empty
    */
-  public throwIfEmpty(exceptionSupplier: () => Error): Optional<T> {
+  public orThrow(exceptionSupplier: () => Error): Optional<T> {
     if (isEmpty(this.value)) {
       throw exceptionSupplier()
     }
