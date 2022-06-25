@@ -10,7 +10,8 @@
     "prepublish": "rm -rf dist && yarn format && yarn lint && yarn build && yarn test",
     "lint": "eslint src --ext .ts",
     "format": "prettier -c \"src/**/*.{ts,tsx,js}\"",
-    "format:fix": "prettier -w \"src/**/*.{ts,tsx,js}\""
+    "format:fix": "prettier -w \"src/**/*.{ts,tsx,js}\"",
+    "docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts"
   },
   "type": "module",
   "main": "dist/cjs/index",
@@ -50,7 +51,9 @@
     "jest": "28.1.1",
     "prettier": "2.7.1",
     "ts-jest": "28.0.5",
-    "typescript": "4.7.4"
+    "typedoc": "0.22.18",
+    "typescript": "4.7.4",
+    "typedoc-plugin-markdown": "3.12.1"
   },
   "prettier": {
     "parser": "typescript",
