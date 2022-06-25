@@ -162,14 +162,35 @@ describe('Optional', () => {
   it('will throw an error if optional is empty in orThrow', () => {
     const result = () =>
       Optional.empty()
-        .orThrow(() => new Error())
+        .orThrow(() => new Error('optional is empty'))
         .get()
-    expect(result).toThrow()
+    expect(result).toThrow('optional is empty')
   })
 
   it("won't throw an error if optional is non-empty in orThrow", () => {
     const result = Optional.of(1)
       .orThrow(() => new Error())
+      .get()
+    expect(result).toBe(1)
+  })
+
+  it("will throw an error if the guard-condition isn't fulfilled", () => {
+    const result = () =>
+      Optional.of(1)
+        .guard(
+          (value) => value > 1,
+          () => new Error('value is not more than 1')
+        )
+        .get()
+    expect(result).toThrow('value is not more than 1')
+  })
+
+  it("won't throw an error if the guard-condition is fulfilled", () => {
+    const result = Optional.of(1)
+      .guard(
+        (value) => value < 2,
+        () => new Error('value is not less than 2')
+      )
       .get()
     expect(result).toBe(1)
   })

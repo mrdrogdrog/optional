@@ -169,6 +169,7 @@ export class Optional<T> {
    * Throws an exception if the current value of the optional is empty.
    *
    * @param exceptionSupplier The supplier that generates an error if the optional is empty
+   * @throws Error if the optional is empty
    * @return The current optional if the value is not empty
    */
   public orThrow(exceptionSupplier: () => Error): Optional<T> {
@@ -176,6 +177,18 @@ export class Optional<T> {
       throw exceptionSupplier()
     }
     return this
+  }
+
+  /**
+   * Checks for the given condition and throws an exception if the condition fails.
+   *
+   * @param predicate The condition that needs to be fulfilled to go on
+   * @param exceptionSupplier A supplier that generates an {@link Error} if the condition fails
+   * @return The current optional if the condition is fulfilled
+   * @throws Error if the condition isn't met.
+   */
+  public guard(predicate: (value: T) => boolean, exceptionSupplier: () => Error): Optional<T> {
+    return this.filter(predicate).orThrow(exceptionSupplier)
   }
 }
 
