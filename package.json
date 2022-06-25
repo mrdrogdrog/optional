@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc-esm && tsc -p tsconfig-cjs.json && find dist/cjs -type d -execdir sh -c 'cd {}; mmv -rd \"*.js*\" \"#1#2\"' \\;",
     "test": "jest",
-    "prepublishOnly": "rm -rf dist && yarn format && yarn lint && yarn build && yarn test",
+    "prepublish": "rm -rf dist && yarn format && yarn lint && yarn build && yarn test",
     "lint": "eslint src --ext .ts",
     "format": "prettier -c \"src/**/*.{ts,tsx,js}\"",
     "format:fix": "prettier -w \"src/**/*.{ts,tsx,js}\""
