@@ -768,8 +768,8 @@ __metadata:
     jest: 28.1.1
     prettier: 2.7.1
     ts-jest: 28.0.5
-    typedoc: ^0.22.18
-    typedoc-plugin-markdown: ^3.12.1
+    typedoc: 0.22.18
+    typedoc-plugin-markdown: 3.12.1
     typescript: 4.7.4
   languageName: unknown
   linkType: soft
@@ -4308,7 +4308,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc-plugin-markdown@npm:^3.12.1":
+"typedoc-plugin-markdown@npm:3.12.1":
   version: 3.12.1
   resolution: "typedoc-plugin-markdown@npm:3.12.1"
   dependencies:
@@ -4319,7 +4319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc@npm:^0.22.18":
+"typedoc@npm:0.22.18":
   version: 0.22.18
   resolution: "typedoc@npm:0.22.18"
   dependencies:
