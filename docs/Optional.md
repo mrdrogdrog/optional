@@ -1,4 +1,8 @@
-[@mrdrogdrog/optional](../README.md) / [Exports](../modules.md) / Optional
+<!--
+SPDX-FileCopyrightText: 2022 Tilman Vatteroth
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
 
 # Class: Optional<T\>
 
