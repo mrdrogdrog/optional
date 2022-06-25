@@ -17,8 +17,8 @@ Install it with yarn or npm using `yarn add @mrdrogdrog/optional` or `npm i @mrd
 ## API
 
 In addition to the [traditional java-like optional functions](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html) I added some more like
-[isEmpty](https://github.com/mrdrogdrog/optional/blob/main/docs/classes/Optional.md#isempty), [orThrow](https://github.com/mrdrogdrog/optional/blob/main/docs/classes/Optional.md#orthrow) and [guard](https://github.com/mrdrogdrog/optional/blob/main/docs/classes/Optional.md#guard).
-Check the docs folder for the whole API.
+[isEmpty](https://github.com/mrdrogdrog/optional/blob/main/docs/Optional.md#isempty), [orThrow](https://github.com/mrdrogdrog/optional/blob/main/docs/Optional.md#orthrow) and [guard](https://github.com/mrdrogdrog/optional/blob/main/docs/Optional.md#guard).
+Check the [docs](https://github.com/mrdrogdrog/optional/tree/main/docs) folder for the whole API.
 
 ## Build
 You can build this lib by running `yarn build`.
