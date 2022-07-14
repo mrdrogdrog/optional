@@ -791,7 +791,7 @@ __metadata:
     jest: 28.1.3
     prettier: 2.7.1
     ts-jest: 28.0.6
-    typedoc: 0.23.5
+    typedoc: 0.23.7
     typedoc-plugin-markdown: 3.13.3
     typescript: 4.7.4
   languageName: unknown
@@ -4341,9 +4341,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc@npm:0.23.5":
-  version: 0.23.5
-  resolution: "typedoc@npm:0.23.5"
+"typedoc@npm:0.23.7":
+  version: 0.23.7
+  resolution: "typedoc@npm:0.23.7"
   dependencies:
     lunr: ^2.3.9
     marked: ^4.0.16
@@ -4353,7 +4353,7 @@ __metadata:
     typescript: 4.6.x || 4.7.x
   bin:
     typedoc: bin/typedoc
-  checksum: a8c0aed855f588a2c008e5520e59e4a59d48d14cd483d0030fc3345bed3757aac8618659c59b4087c221aa2f7a7875b9f30c7a4a966e43ec969cd8905d6d8b67
+  checksum: 70e4462602a989c51657111db8689947d7ac0e938b2edee1045b279808c56a6ffd2d42ed0f8080645e28bc8c84f82cb3faec54ea5cc5b5fd62d2fc4ea4548297
   languageName: node
   linkType: hard
 
