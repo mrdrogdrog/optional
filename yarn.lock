@@ -397,23 +397,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@digitak/grubber@npm:^3.1.2":
+"@digitak/grubber@npm:^3.1.3":
   version: 3.1.3
   resolution: "@digitak/grubber@npm:3.1.3"
   checksum: 6965791650025462584a13730a70e272430f388dbf1e1f00c87d5e4ff7f6ec863d48fba959bb116f9c191230d79419ed6a0978d773a3b3586ad1756576287326
   languageName: node
   linkType: hard
 
-"@digitak/tsc-esm@npm:3.1.3":
-  version: 3.1.3
-  resolution: "@digitak/tsc-esm@npm:3.1.3"
+"@digitak/tsc-esm@npm:3.1.4":
+  version: 3.1.4
+  resolution: "@digitak/tsc-esm@npm:3.1.4"
   dependencies:
-    "@digitak/grubber": ^3.1.2
+    "@digitak/grubber": ^3.1.3
     fast-glob: ^3.2.5
     relaxed-json: ^1.0.3
   bin:
     tsc-esm: binary/tsc-esm.js
-  checksum: 1dd713331cba283091d5c08dbcc24b69e5a3c447658ca30f712610d984a217044b2b5dedddbcfae742cf5f2d3a4fcd7a232201835d84c053b64b670a72349f5c
+  checksum: f516e7c47eb0787d2339304b3b40072abe710e75beae748acec2bd238ca4785d678f47eb3801a8c053ab7904dea8962f75ba4a3f7e6e6cd47c2758ea6312dc94
   languageName: node
   linkType: hard
 
@@ -773,7 +773,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mrdrogdrog/optional@workspace:."
   dependencies:
-    "@digitak/tsc-esm": 3.1.3
+    "@digitak/tsc-esm": 3.1.4
     "@jest/types": 28.1.3
     "@typescript-eslint/eslint-plugin": 5.33.1
     "@typescript-eslint/parser": 5.33.1
