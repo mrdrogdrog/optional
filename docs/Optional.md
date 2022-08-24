@@ -39,6 +39,7 @@ A container object that wraps possibly undefined values.
 - [empty](Optional.md#empty)
 - [of](Optional.md#of)
 - [ofNullable](Optional.md#ofnullable)
+- [wrapInArray](Optional.md#wrapinarray)
 
 ## Constructors
 
@@ -82,10 +83,6 @@ Checks the value in the optional for a certain condition. Will be skipped if the
 
 The optional itself if the predicate is true. Returns an empty optional if the predicate is false or the optional is empty.
 
-#### Defined in
-
-[index.ts:101](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L101)
-
 ___
 
 ### flatMap
@@ -112,10 +109,6 @@ Maps the optional value to another optional. Will be skipped if the optional is 
 
 An optional that is produced by the mapper function or an empty optional if no value is present.
 
-#### Defined in
-
-[index.ts:121](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L121)
-
 ___
 
 ### get
@@ -131,10 +124,6 @@ Returns the value that is wrapped in the optional.
 `T`
 
 The wrapped value
-
-#### Defined in
-
-[index.ts:49](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L49)
 
 ___
 
@@ -159,10 +148,6 @@ Checks for the given condition and throws an exception if the condition fails.
 
 The current optional if the condition is fulfilled
 
-#### Defined in
-
-[index.ts:190](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L190)
-
 ___
 
 ### ifPresent
@@ -180,10 +165,6 @@ Executes a consumer callback if the optional contains a value.
 #### Returns
 
 `void`
-
-#### Defined in
-
-[index.ts:75](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L75)
 
 ___
 
@@ -204,10 +185,6 @@ Executes one of the given callbacks.
 
 `void`
 
-#### Defined in
-
-[index.ts:87](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L87)
-
 ___
 
 ### isEmpty
@@ -220,10 +197,6 @@ Defines if the optional is empty. Opposite of [isPresent](Optional.md#ispresent)
 
 `boolean`
 
-#### Defined in
-
-[index.ts:66](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L66)
-
 ___
 
 ### isPresent
@@ -235,10 +208,6 @@ Checks if the optional contains a value. Opposite of [isPresent](Optional.md#isp
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-[index.ts:59](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L59)
 
 ___
 
@@ -266,10 +235,6 @@ Maps the optional value to something else. Will be skipped if the optional is em
 
 An optional that contains the mapped value or is empty if the map returned a nullish value
 
-#### Defined in
-
-[index.ts:111](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L111)
-
 ___
 
 ### or
@@ -295,10 +260,6 @@ If the current optional is empty then another optional is generated and returned
 [`Optional`](Optional.md)<`T` \| `U`\>
 
 The current optional or the generated optional if the current one is empty
-
-#### Defined in
-
-[index.ts:164](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L164)
 
 ___
 
@@ -326,10 +287,6 @@ Returns the value of the optional or the given value if the optional is empty.
 
 The value from the optional or the alternative value
 
-#### Defined in
-
-[index.ts:131](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L131)
-
 ___
 
 ### orElseGet
@@ -356,10 +313,6 @@ Returns the value of the optional or the value of the given supplier if the opti
 
 The value from the optional or the alternative value
 
-#### Defined in
-
-[index.ts:141](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L141)
-
 ___
 
 ### orElseThrow
@@ -379,10 +332,6 @@ Returns the value of the optional or throws an error if the optional is empty.
 `T`
 
 The value from the optional
-
-#### Defined in
-
-[index.ts:151](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L151)
 
 ___
 
@@ -406,9 +355,26 @@ Throws an exception if the current value of the optional is empty.
 
 The current optional if the value is not empty
 
-#### Defined in
+___
 
-[index.ts:175](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L175)
+### wrapInArray
+
+▸ **wrapInArray**(): [`T`] \| []
+
+Returns the value of the optional wrapped in an array.
+If the optional is empty then the array will be empty too.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Returns
+
+[`T`] \| []
+
+An array that is either empty or contains the value
 
 ___
 
@@ -427,10 +393,6 @@ Creates an empty optional.
 #### Returns
 
 [`Optional`](Optional.md)<`T`\>
-
-#### Defined in
-
-[index.ts:16](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L16)
 
 ___
 
@@ -458,10 +420,6 @@ Creates an Optional from a non-null value.
 
 the created optional with the given value
 
-#### Defined in
-
-[index.ts:26](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L26)
-
 ___
 
 ### ofNullable
@@ -487,7 +445,3 @@ Creates an Optional from a value that might be null.
 [`Optional`](Optional.md)<`T`\>
 
 the created optional with the given value
-
-#### Defined in
-
-[index.ts:39](https://github.com/mrdrogdrog/optional/blob/2cddda4/src/index.ts#L39)

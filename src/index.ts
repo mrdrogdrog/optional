@@ -190,6 +190,20 @@ export class Optional<T> {
   public guard(predicate: (value: T) => boolean, exceptionSupplier: () => Error): Optional<T> {
     return this.filter(predicate).orThrow(exceptionSupplier)
   }
+
+  /**
+   * Returns the value of the optional wrapped in an array.
+   * If the optional is empty then the array will be empty too.
+   *
+   * @return An array that is either empty or contains the value
+   */
+  public wrapInArray(): [T] | [] {
+    if (isEmpty(this.value)) {
+      return []
+    } else {
+      return [this.value]
+    }
+  }
 }
 
 /**

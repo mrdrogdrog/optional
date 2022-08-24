@@ -195,4 +195,14 @@ describe('Optional', () => {
       .get()
     expect(result).toBe(1)
   })
+
+  it('can wrap the value in an array', () => {
+    const result = Optional.of(1).wrapInArray()
+    expect(result).toStrictEqual([1])
+  })
+
+  it('can fallback to an empty array if no value is present', () => {
+    const result = Optional.empty().wrapInArray()
+    expect(result).toStrictEqual([])
+  })
 })
