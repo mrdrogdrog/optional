@@ -713,7 +713,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:29.2.0, @jest/types@npm:^29.2.0":
+"@jest/types@npm:29.2.1":
+  version: 29.2.1
+  resolution: "@jest/types@npm:29.2.1"
+  dependencies:
+    "@jest/schemas": ^29.0.0
+    "@types/istanbul-lib-coverage": ^2.0.0
+    "@types/istanbul-reports": ^3.0.0
+    "@types/node": "*"
+    "@types/yargs": ^17.0.8
+    chalk: ^4.0.0
+  checksum: a83f20727425179aa05974aa7553c307d207fbb6b7ae5ab1e37fbb6ba9b6655f26655301fc804f2545d33f4c4a6b59d41eed1737c005d2b83fce9e14841b4150
+  languageName: node
+  linkType: hard
+
+"@jest/types@npm:^29.2.0":
   version: 29.2.0
   resolution: "@jest/types@npm:29.2.0"
   dependencies:
@@ -784,7 +798,7 @@ __metadata:
   resolution: "@mrdrogdrog/optional@workspace:."
   dependencies:
     "@digitak/tsc-esm": 3.1.4
-    "@jest/types": 29.2.0
+    "@jest/types": 29.2.1
     "@typescript-eslint/eslint-plugin": 5.40.1
     "@typescript-eslint/parser": 5.40.1
     eslint: 8.26.0
