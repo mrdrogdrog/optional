@@ -22,6 +22,8 @@ Check the [docs](https://github.com/mrdrogdrog/optional/tree/main/docs) folder f
 
 ## Build
 You can build this lib by running `yarn build`.
+Run tests with `yarn test`.
+To check the code style use `yarn lint`.
 
 ## Contributions
 
