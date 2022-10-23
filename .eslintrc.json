@@ -4,26 +4,33 @@
  * SPDX-License-Identifier: CC0-1.0
  */
 {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": ["./tsconfig-eslint.json"]
+  "parser" : "@typescript-eslint/parser",
+  "parserOptions" : {
+    "project" : [
+      "./tsconfig.json"
+    ]
   },
-  "plugins": ["@typescript-eslint", "jest"],
-  "env": {
-    "jest": true,
-    "jest/globals": true
+  "plugins" : [
+    "@typescript-eslint",
+    "jest",
+    "prettier"
+  ],
+  "env" : {
+    "jest" : true,
+    "jest/globals" : true
   },
-  "extends": [
+  "extends" : [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
-  "rules": {
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error"
+  "rules" : {
+    "jest/no-disabled-tests" : "warn",
+    "jest/no-focused-tests" : "error",
+    "jest/no-identical-title" : "error",
+    "jest/prefer-to-have-length" : "warn",
+    "jest/valid-expect" : "error"
   }
 }

@@ -14,11 +14,9 @@
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "outDir": "dist/mjs",
-    "rootDir": "./src",
     "allowJs": true,
     "sourceMap": true
   },
-  "include": ["./src"],
-  "exclude": ["./dist", "**/*.test.*", "**/__mocks__/*", "**/__tests__/*"]
+  "include": ["src"],
+  "exclude": ["dist"]
 }
