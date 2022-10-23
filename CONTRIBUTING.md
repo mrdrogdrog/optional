@@ -10,6 +10,11 @@ Thanks for your interest in contributing.
 
 Just open an issue to discuss your changes or directly open a PR with your changes.
 
+## Code Style
+All code files must
+- have a copyright header containing the copyright text and the project license.
+- be formatted and without any linter errors or warnings. Use `yarn lint` to check this.
+- be tested.
 
 ## Certificate of Origin
 
