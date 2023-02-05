@@ -8,7 +8,8 @@
  * A container object that wraps possibly undefined values.
  */
 export class Optional<T> {
-  private constructor(private value?: T | null | undefined) {}
+  private constructor(private value?: T | null | undefined) {
+  }
 
   /**
    * Creates an empty optional.
@@ -188,7 +189,8 @@ export class Optional<T> {
    * @throws Error if the condition isn't met.
    */
   public guard(predicate: (value: T) => boolean, exceptionSupplier: () => Error): Optional<T> {
-    return this.filter(predicate).orThrow(exceptionSupplier)
+    return isEmpty(this.value) ? this : this.filter(predicate)
+                                            .orThrow(exceptionSupplier)
   }
 
   /**
