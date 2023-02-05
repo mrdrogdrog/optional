@@ -1,6 +1,6 @@
 {
   "name": "@mrdrogdrog/optional",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Provides a java-like optional class",
   "author": "Tilman Vatteroth <git@tilmanvatteroth.de>",
   "license": "MIT",
