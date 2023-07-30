@@ -1,4 +1,8 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2023 Tilman Vatteroth
+#
+# SPDX-License-Identifier: MIT
+
 
 set -e
 

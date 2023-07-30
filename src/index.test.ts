@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2022 Tilman Vatteroth
+ * SPDX-FileCopyrightText: 2023 Tilman Vatteroth
  *
  * SPDX-License-Identifier: MIT
  */
