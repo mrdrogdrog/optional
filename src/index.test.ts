@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-import { Optional } from './index'
+import { Optional } from './index.js'
 import { describe, expect, it } from '@jest/globals'
 
 describe('Optional', () => {

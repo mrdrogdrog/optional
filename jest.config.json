@@ -15,7 +15,7 @@
     "^.+\\.tsx?$" : [
       "ts-jest",
       {
-        "tsconfig" : "tsconfig.esm.json",
+        "tsconfig" : "tsconfig.test.json",
         "useESM" : true
       }
     ]
