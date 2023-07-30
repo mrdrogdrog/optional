@@ -1,8 +1,8 @@
 {
-  "preset": "ts-jest",
-  "testEnvironment": "node",
-  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
-  "testPathIgnorePatterns": [
+  "preset" : "ts-jest",
+  "testEnvironment" : "node",
+  "testRegex" : "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
+  "testPathIgnorePatterns" : [
     "/dist/"
   ],
   "extensionsToTreatAsEsm" : [
@@ -15,6 +15,7 @@
     "^.+\\.tsx?$" : [
       "ts-jest",
       {
+        "tsconfig" : "tsconfig.esm.json",
         "useESM" : true
       }
     ]
