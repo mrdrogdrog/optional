@@ -7,7 +7,7 @@
   "scripts": {
     "build": "./build.sh",
     "test": "jest",
-    "prepublish": "rm -rf dist && yarn lint && yarn build && yarn test",
+    "prepublish": "rm -rf dist && npm run lint && npm run build && npm run test",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint --fix --ext .ts src",
     "docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts"
@@ -66,6 +66,5 @@
     "trailingComma": "none",
     "bracketSpacing": true,
     "arrowParens": "always"
-  },
-  "packageManager": "yarn@4.0.2"
+  }
 }

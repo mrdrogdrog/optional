@@ -1,47 +1,28 @@
-# SPDX-FileCopyrightText: 2020 Tilman Vatteroth
+# SPDX-FileCopyrightText: 2023 Tilman Vatteroth
 #
 # SPDX-License-Identifier: MIT
 
-name: Unit Tests
+name: Build, Lint and Test
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-
-      - name: Cache yarn cache
-        uses: actions/cache@v4.0.0
-        id: yarn-cache
+      - uses: actions/setup-node@v4
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-18-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-18
-
-      - name: Set up NodeJS
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+          node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: npm ci
 
-      - name: Build project
-        run: yarn build
 
-      - name: Test project
-        run: yarn test
