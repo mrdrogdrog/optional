@@ -175,13 +175,11 @@ describe('Optional', () => {
     expect(result).toBe(1)
   })
 
-  it("will skip the guard if optional is empty", () => {
-    const result =
-      Optional.empty()
-              .guard(
-                () => false,
-                () => new Error('value is not more than 1')
-              )
+  it('will skip the guard if optional is empty', () => {
+    const result = Optional.empty().guard(
+      () => false,
+      () => new Error('value is not more than 1')
+    )
     expect(result.isEmpty()).toBeTruthy()
   })
 
