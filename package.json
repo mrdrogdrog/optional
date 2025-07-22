@@ -45,7 +45,7 @@
     "url": "https://github.com/mrdrogdrog/optional.git"
   },
   "devDependencies": {
-    "@jest/types": "30.0.0",
+    "@jest/types": "30.0.5",
     "@eslint/js": "9.29.0",
     "typescript-eslint": "8.34.0",
     "eslint": "9.29.0",
