@@ -5,7 +5,7 @@
  */
 
 import { Optional } from './index.js'
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 describe('Optional', () => {
   it('can wrap and unwrap a value', () => {
